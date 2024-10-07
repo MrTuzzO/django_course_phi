@@ -8,6 +8,7 @@
 <body>
     <h1>This is Home page</h1>
     <h2>Name: {{name}}. Age: {{age}}</h2>
+
     <p>Marks: </p>
     {% for num in  marks%}
     <span>{{num}}</span>
@@ -19,7 +20,11 @@
     <p>Your are not Adult</p>
     {% endif %}
     
-    <p>Friends: {{ friends | join:" , " }}</p>
+    <p>Friends: {{ friends | join:" , " }} <br> Total friend: {{friends | length}}</p>
+    <h2>Today: {{currentTime | date:"D d M y"}} <br>Current Time: {{currentTime | time:"H:i"}}</h2>
+    <h2>{{sentence | title}}</h2>
+    <h2>{{sentence | upper}}</h2>
+    <h2>{{sentence | truncatechars:10}}</h2>
     
 </body>
 </html>
